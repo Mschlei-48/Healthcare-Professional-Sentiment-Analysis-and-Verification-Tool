@@ -44,7 +44,7 @@ with st.sidebar.container():
     query=st.sidebar.text_input(label="Give name of medical professional to query",value="Dr Matthew fake doctor")
     num=st.sidebar.slider(label="Number of tweets",min_value=10,max_value=100,value=100,step=20,key="num")
 if query and num:
-    payload = { 'api_key': 'f1db5231bec21e7705b5ba1fbf209d72', 
+  , 
     'url': 'https://x.com/search?q=dr%20matthew%20bogus%20doctor&src=typed_query&f=top' }
     response= requests.get('https://api.scraperapi.com/', params=payload)
     data=response.json()
